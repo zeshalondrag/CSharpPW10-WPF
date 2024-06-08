@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:EMIAC.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AuthWindow" Height="450" Width="800">
+        Title="Авторизация" Height="450" Width="800">
     <Grid>
 
     </Grid>
