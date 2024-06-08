@@ -1,0 +1,13 @@
+﻿using EMIAC.ViewModel.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EMIAC.ViewModel
+{
+    internal class AuthViewModel : BindingHelper
+    {
+    }
+}
