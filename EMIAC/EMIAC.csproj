@@ -75,6 +75,9 @@
     </Compile>
     <Compile Include="ViewModel\AuthViewModel.cs" />
     <Compile Include="ViewModel\Helpers\BindingHelper.cs" />
+    <Compile Include="View\AuthSotrWindow.xaml.cs">
+      <DependentUpon>AuthSotrWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\AuthSotrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AuthWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
