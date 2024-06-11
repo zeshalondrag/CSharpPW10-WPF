@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\icon-app.ico</ApplicationIcon>
+    <ApplicationIcon>View\Images\icon-app.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialDesignColors, Version=3.0.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
@@ -123,7 +123,23 @@
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\icon-app.ico" />
+    <Resource Include="View\Images\icon-app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\KvadratBel.png" />
+    <Resource Include="View\Images\LiniyaBel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\LiniyaCher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\KrestikCher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\KvadratCher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\KrestikBel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets')" />
