@@ -10,23 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.TextFormatting;
 using System.Windows.Shapes;
-using EMIAC.ViewModel;
 
 namespace EMIAC.View
 {
-    public partial class AuthWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для AuthSotrWindow.xaml
+    /// </summary>
+    public partial class AuthSotrWindow : Window
     {
-        public AuthWindow()
+        public AuthSotrWindow()
         {
             InitializeComponent();
-            DataContext = new AuthViewModel();
         }
 
-        private void Auth_For_Sotrudnik(object sender, RoutedEventArgs e)
+        private void Auth_Client(object sender, RoutedEventArgs e)
         {
-            AuthSotrWindow authsotr = new AuthSotrWindow();
-            authsotr.Show();
+            AuthWindow authclient = new AuthWindow();
+            authclient.Show();
             this.Close();
         }
     }
