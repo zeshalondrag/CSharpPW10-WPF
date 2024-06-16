@@ -89,5 +89,10 @@ namespace EMIAC.View
             }
         }
 
+        private void VxodDlyaVrach(object sender, RoutedEventArgs e)
+        {
+            AdminCRUDPatient adminCRUDPatient = new AdminCRUDPatient();
+            adminCRUDPatient.Show();
+        }
     }
 }
