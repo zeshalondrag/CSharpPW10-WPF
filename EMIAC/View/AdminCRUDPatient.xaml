@@ -1,0 +1,34 @@
+﻿<Window x:Class="EMIAC.View.AdminCRUDPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EMIAC.View"
+        mc:Ignorable="d"
+        Title="AdminCRUDPatient" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="ЕМИАС - Администратор" FontSize="20" Height="29" Foreground="White" TextWrapping="Wrap" FontWeight="Bold" Width="457"/>
+        <StackPanel Grid.ColumnSpan="5" Background="#007BFE"/>
+    </Grid>
+</Window>

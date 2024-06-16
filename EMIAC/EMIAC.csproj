@@ -75,11 +75,23 @@
     </Compile>
     <Compile Include="ViewModel\AuthViewModel.cs" />
     <Compile Include="ViewModel\Helpers\BindingHelper.cs" />
+    <Compile Include="View\AdminCRUDAdmin.xaml.cs">
+      <DependentUpon>AdminCRUDAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminCRUDPatient.xaml.cs">
+      <DependentUpon>AdminCRUDPatient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminCRUDVrach.xaml.cs">
+      <DependentUpon>AdminCRUDVrach.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AuthSotrWindow.xaml.cs">
       <DependentUpon>AuthSotrWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainUserWindow.xaml.cs">
+      <DependentUpon>MainUserWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -110,11 +122,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\AdminCRUDAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminCRUDPatient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AdminCRUDVrach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AuthSotrWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainUserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
