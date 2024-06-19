@@ -115,11 +115,14 @@
     </Compile>
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="Models\ApiService.cs" />
+    <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Services\AdministratorService.cs" />
+    <Compile Include="Services\DoctorService.cs" />
     <Compile Include="Services\PatientService.cs" />
     <Compile Include="ViewModel\AdminViewModel.cs" />
     <Compile Include="ViewModel\AuthViewModel.cs" />
+    <Compile Include="ViewModel\DoctorViewModel.cs" />
     <Compile Include="ViewModel\Helpers\BindingHelper.cs" />
     <Compile Include="ViewModel\PatientViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
