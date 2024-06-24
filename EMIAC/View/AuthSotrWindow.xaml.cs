@@ -53,6 +53,7 @@ namespace EMIAC.View
             //    this.WindowState = WindowState.Maximized;
             //}
         }
+
         private Point _mouseDownPosition;
         private bool _isMouseDown;
 
@@ -91,7 +92,7 @@ namespace EMIAC.View
 
         private void VxodDlyaVrach(object sender, RoutedEventArgs e)
         {
-            DoctorWindow authvrach = new DoctorWindow();
+            AdminCRUDAdmin authvrach = new AdminCRUDAdmin();
             authvrach.Show();
             this.Close();
         }

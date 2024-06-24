@@ -56,6 +56,7 @@
         <materialDesign:PackIcon Kind="CogOutline" Grid.Row="2" Foreground="White" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <materialDesign:PackIcon Kind="ChevronDown" Grid.Row="2" Height="25" Width="26" VerticalAlignment="Center" Margin="172,0,0,0" Foreground="White" RenderTransformOrigin="0.492,-0.204"/>
         <ComboBox Grid.Row="2" Height="40" Margin="109,0,115,0" BorderThickness="0,0,0,0" Foreground="Transparent" Opacity="0.1"/>
-
+        <!-- Основная часть окна (без TreeView) -->
+        
     </Grid>
 </Window>
