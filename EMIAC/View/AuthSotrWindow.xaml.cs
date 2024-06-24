@@ -21,10 +21,14 @@ namespace EMIAC.View
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is AuthViewModel viewModel)
-            {
-                await viewModel.LoginAsync();
-            }
+            //if (this.WindowState == WindowState.Maximized)
+            //{
+            //    this.WindowState = WindowState.Normal;
+            //}
+            //else
+            //{
+            //    this.WindowState = WindowState.Maximized;
+            //}
         }
         private Point _mouseDownPosition;
         private bool _isMouseDown;

@@ -6,6 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EMIAC.View"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Окно врача" Height="1500" Width="1530">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
@@ -101,7 +102,7 @@
             <TextBlock Grid.Row="11" Margin="449,135,5,156" Height="24" Text="Время" Foreground="#807F7F"/>
             <Button Grid.Row="11" Margin="10,167,273,116" Background="#007BFE" Content="Начать приём"/>
             <Button Grid.Row="11" Margin="273,168,10,115" Background="#FE0000" Content="Отменить запись"/>
-            <Button Grid.Row="12" Background="#FE0000" Content="Выйти из аккаунта" Margin="10,2,10,1"/>
+            <Button Grid.Row="12" Background="#FE0000" Content="Выйти из аккаунта" Margin="10,2,10,1" Click="GoAuth"/>
             <RichTextBox AcceptsTab="True" Grid.Row="11" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Margin="0,0,10,0" Foreground="#807F7F">
                 <RichTextBox.Resources>
                     <Style TargetType="{x:Type Paragraph}">
@@ -381,6 +382,21 @@
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
+            <Button Grid.Column="2" BorderBrush="Transparent" Click="Svernyt" Height="30" Width="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/LiniyaBel.png"/>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" BorderBrush="Transparent" Click="FullEkran" Height="30" Width="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/KvadratBel.png"/>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="4" BorderBrush="Transparent" Margin="5,4,0,4" Click="Exit" Height="30" Width="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/KrestikBel.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
     </ScrollViewer>
 </Window>

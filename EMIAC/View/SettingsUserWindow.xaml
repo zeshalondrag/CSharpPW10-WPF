@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EMIAC.View"
         mc:Ignorable="d"
-        Title="SettingsUserWindow" Height="780" Width="1500">
+        Title="SettingsUserWindow" Height="780" Width="1530">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="320"/>
