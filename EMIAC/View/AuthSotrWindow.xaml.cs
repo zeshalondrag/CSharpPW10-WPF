@@ -44,14 +44,14 @@ namespace EMIAC.View
 
         private void FullEkran(object sender, RoutedEventArgs e)
         {
-            if (this.WindowState == WindowState.Maximized)
-            {
-                this.WindowState = WindowState.Normal;
-            }
-            else
-            {
-                this.WindowState = WindowState.Maximized;
-            }
+            //if (this.WindowState == WindowState.Maximized)
+            //{
+            //    this.WindowState = WindowState.Normal;
+            //}
+            //else
+            //{
+            //    this.WindowState = WindowState.Maximized;
+            //}
         }
         private Point _mouseDownPosition;
         private bool _isMouseDown;

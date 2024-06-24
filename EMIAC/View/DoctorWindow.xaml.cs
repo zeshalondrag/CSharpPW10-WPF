@@ -24,5 +24,34 @@ namespace EMIAC.View
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FullEkran(object sender, RoutedEventArgs e)
+        {
+            //if (this.WindowState == WindowState.Maximized)
+            //{
+            //    this.WindowState = WindowState.Normal;
+            //}
+            //else
+            //{
+            //    this.WindowState = WindowState.Maximized;
+            //}
+        }
+
+        private void Svernyt(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void GoAuth(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            this.Close();
+        }
     }
 }

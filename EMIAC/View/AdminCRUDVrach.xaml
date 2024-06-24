@@ -46,5 +46,20 @@
         <Button Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="4" Height="30" Width="280" Background="#007BFE" Content="Изменить"/>
         <Button Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="4" Height="30" Width="280" Background="#007BFE" Content="Удалить"/>
         <Button Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="4" Height="30" Width="280" Background="#FE0000" Content="Выйти из аккаунта"/>
+        <Button Grid.Column="2" BorderBrush="Transparent" Click="Svernyt" Height="30" Width="30">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/LiniyaBel.png"/>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="3" BorderBrush="Transparent" Click="FullEkran" Height="30" Width="30">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/KvadratBel.png"/>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="4" BorderBrush="Transparent" Margin="5,4,0,4" Click="Exit" Height="30" Width="30">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/KrestikBel.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
