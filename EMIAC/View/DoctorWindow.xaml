@@ -66,7 +66,7 @@
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="12" materialDesign:HintAssist.Hint="Наименование исследования" BorderBrush="#807F7F" BorderThickness="1" Margin="121,4,10,5"/>
             <Button Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="14" Content="Прикрепить дополнительные файлы" Margin="0,6,10,7" Background="#007BFE"/>
             <Button Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="15" Content="Завершить прием"  Margin="0,6,10,7" Background="#007BFE"/>
-            <StackPanel Grid.Row="1" Grid.RowSpan="12" Background="#EDEDED"/>
+            <ListBox Grid.Row="1" Grid.RowSpan="12" Background="#EDEDED"/>
             <DatePicker Grid.Row="1" materialDesign:HintAssist.Hint="Расписание" Margin="10,0,10,0" BorderBrush="#807F7F" BorderThickness="2" Height="24"/>
             <StackPanel Background="White" Grid.Row="2" Grid.RowSpan="2"/>
             <TextBlock Grid.Row="2" Margin="0,5,174,5" Text="&lt;Имя пациента>" FontSize="16" Foreground="#807F7F"/>

@@ -70,5 +70,12 @@ namespace EMIAC.View
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void ExitToAuthWindow(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            this.Close();
+        }
     }
 }

@@ -7,55 +7,193 @@
         xmlns:local="clr-namespace:EMIAC.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
         Title="MainUserWindow" Height="850" Width="1500">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="320"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="40"/>
-            <ColumnDefinition Width="40"/>
-            <ColumnDefinition Width="40"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
-        <StackPanel Background="#007BFE" >
-            <TextBlock Text=" ЕМИАС                                 в.1.0" Foreground="White" FontSize="20" FontWeight="Bold"/>
-        </StackPanel>
-        <StackPanel Background="#007BFE" Grid.RowSpan="2" Grid.Row="1">
-            <TreeView MinWidth="220" Foreground="White" FontSize="14">
-                <TreeViewItem Header="Главная">
-                    <TreeViewItem>
-                        <TreeViewItem.Header>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Записи и направления" />
-                            </StackPanel>
-                        </TreeViewItem.Header>
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <StackPanel Background="#007BFE" >
+                <TextBlock Text=" ЕМИАС                                 в.1.0" Foreground="White" FontSize="20" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Background="#007BFE" Grid.RowSpan="8" Grid.Row="1">
+                <TreeView MinWidth="220" Foreground="White" FontSize="14">
+                    <TreeViewItem Header="Главная">
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Записи и направления" />
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Рецепты"/>
+                        <TreeViewItem Header="Диспанцеризация"/>
                     </TreeViewItem>
-                    <TreeViewItem Header="Рецепты"/>
-                    <TreeViewItem Header="Диспанцеризация"/>
-                </TreeViewItem>
-                <TreeViewItem Grid.Row="1" Header="Медкарта" IsExpanded="True">
-                    <TreeViewItem Header="Приёмы" />
-                    <TreeViewItem>
-                        <TreeViewItem.Header>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Анализы" />
-                            </StackPanel>
-                        </TreeViewItem.Header>
+                    <TreeViewItem Grid.Row="1" Header="Медкарта" IsExpanded="True">
+                        <TreeViewItem Header="Приёмы" />
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Анализы" />
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Исследования" />
                     </TreeViewItem>
-                    <TreeViewItem Header="Исследования" />
-                </TreeViewItem>
-            </TreeView>
-        </StackPanel>
-        <TextBlock Text="Запись" Grid.Column="1" FontSize="25" Grid.ColumnSpan="2" Margin="10,0,30,0" TextWrapping="Wrap" FontWeight="DemiBold"/>
-        <TextBlock Text="Полис ОМС : " Grid.Row="2" Foreground="White" FontSize="16" Margin="10,9,0,0"/>
-        <Button Grid.Row="2" Height="40" Foreground="Transparent" BorderBrush="Transparent" Width="40" HorizontalAlignment="Right" VerticalAlignment="Center" Click="SettingsClient" Background="#00000000"/>
-        <materialDesign:PackIcon Kind="CogOutline" Grid.Row="2" Foreground="White" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <materialDesign:PackIcon Kind="ChevronDown" Grid.Row="2" Height="25" Width="26" VerticalAlignment="Center" Margin="172,0,0,0" Foreground="White" RenderTransformOrigin="0.492,-0.204"/>
-        <ComboBox Grid.Row="2" Height="40" Margin="109,0,115,0" BorderThickness="0,0,0,0" Foreground="Transparent" Opacity="0.1"/>
-
-    </Grid>
+                </TreeView>
+            </StackPanel>
+            <TextBlock Text="Запись" Grid.Column="1" FontSize="25" Grid.ColumnSpan="2" Margin="10,0,30,0" TextWrapping="Wrap" FontWeight="DemiBold"/>
+            <TextBlock Text="Полис ОМС : " Grid.Row="8" Foreground="White" FontSize="16" Margin="10,9,0,0"/>
+            <Button Grid.Row="8" Height="40" Foreground="Transparent" BorderBrush="Transparent" Width="40" HorizontalAlignment="Right" VerticalAlignment="Center" Click="SettingsClient" Background="#00000000"/>
+            <materialDesign:PackIcon Kind="CogOutline" Grid.Row="8" Foreground="White" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <materialDesign:PackIcon Kind="ChevronDown" Grid.Row="8" Height="25" Width="26" VerticalAlignment="Center" Margin="172,0,0,0" Foreground="White" RenderTransformOrigin="0.492,-0.204"/>
+            <ComboBox Grid.Row="8" Height="40" Margin="109,0,115,0" BorderThickness="0,0,0,0" Foreground="Transparent" Opacity="0.1"/>
+            <!-- Основная часть окна (без TreeView) -->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="White">
+                <ListBox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="#EDEDED" Margin="10,0,0,0" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Ychastkovii.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Участковый" HorizontalAlignment="Center" FontSize="20" Height="25" Width="110"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/Zybnoi.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Зубной врач" HorizontalAlignment="Center" FontSize="20" Height="25" Width="120"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/Ychastkovii.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Стоматолог" HorizontalAlignment="Center" FontSize="20" Height="25" Width="108"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/Oftal.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Офтальмолог" HorizontalAlignment="Center" FontSize="20" Height="25" Width="125"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/Otor.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Оториноларинголог" FontSize="16" Height="26" Width="150" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/DetXir.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Детский хирург" HorizontalAlignment="Center" FontSize="16" Height="25" Width="116"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/Spravki.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Направления" HorizontalAlignment="Center" FontSize="20" Height="25" Width="125"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160">
+                        <Image Source="Images/Pediatr.png" Width="30" Height="30" Margin="10"/>
+                        <TextBlock Text="Педиатр" HorizontalAlignment="Center" FontSize="20" Height="25" Width="80"/>
+                    </StackPanel>
+                </ListBox>
+            </ScrollViewer>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="Действующие записи" FontSize="20" VerticalAlignment="Center"/>
+            <DatePicker Grid.Row="2" Grid.Column="1" FontSize="12"  Margin="224,15,672,10" materialDesign:HintAssist.Hint="Записи с:" Width="147" BorderBrush="#807F7F" BorderThickness="1"/>
+            <DatePicker Grid.Row="2" Grid.Column="1" materialDesign:HintAssist.Hint="Записи по:" FontSize="12" Margin="390,15,506,10" Width="147" BorderBrush="#807F7F" BorderThickness="1"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="Архивные записи" FontSize="20" VerticalAlignment="Center"/>
+            <DatePicker Grid.Row="4" Grid.Column="1" FontSize="12"  Margin="224,15,672,10" materialDesign:HintAssist.Hint="Записи с:" Width="147" BorderBrush="#807F7F" BorderThickness="1"/>
+            <DatePicker Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="Записи по:" FontSize="12" Margin="390,15,506,10" Width="147" BorderBrush="#807F7F" BorderThickness="1"/>
+            <ListBox Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="10,10,0,10" Background="#EDEDED">
+                <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
+                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
+                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+                </StackPanel>
+                <StackPanel Height="85" Width="280" Margin="0,-5,0,0" Background="White">
+                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+                </StackPanel>
+            </ListBox>
+            <ListBox Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="327,10,0,10" Background="#EDEDED">
+                <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
+                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
+                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+                </StackPanel>
+            </ListBox>
+            <ListBox Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="647,10,0,10" Background="#EDEDED">
+                <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
+                <TextBlock Height="20" Width="214" FontSize="12" Margin="50,70,0,0" TextWrapping="Wrap" Text="На этот месяц нет архивных записей"  Foreground="#807F7F"/>
+            </ListBox>
+            <ListBox Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="10,10,0,10" Background="#EDEDED">
+                <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
+                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
+                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+                </StackPanel>
+                <StackPanel Height="85" Width="280" Margin="0,-5,0,0" Background="White">
+                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+                </StackPanel>
+            </ListBox>
+            <ListBox Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="327,10,0,10" Background="#EDEDED">
+                <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
+                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
+                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+                </StackPanel>
+            </ListBox>
+            <ListBox Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="647,10,0,10" Background="#EDEDED">
+                <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
+                <TextBlock Height="20" Width="214" FontSize="12" Margin="50,70,0,0" TextWrapping="Wrap" Text="На этот месяц нет архивных записей"  Foreground="#807F7F"/>
+            </ListBox>
+            <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Margin="10,4,10,4" Background="#007BFE" Content="Записаться на прием" FontSize="18"/>
+            <Button Grid.Column="2" BorderBrush="Transparent" Click="Svernyt" Margin="5,5,5,5" Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/LiniyaCher.png"/>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" BorderBrush="Transparent" Click="FullEkran" Width="30" Height="30" Margin="5,5,5,5">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/KvadratCher.png"/>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="4" BorderBrush="Transparent" Click="Exit" Width="30" Height="30">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/KrestikCher.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </ScrollViewer>
 </Window>

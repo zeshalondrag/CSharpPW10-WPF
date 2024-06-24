@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using EMIAC.ViewModels;
 
 namespace EMIAC.View
@@ -19,7 +20,17 @@ namespace EMIAC.View
             }
         }
 
-        private async void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Svernyt(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void FullEkran(object sender, RoutedEventArgs e)
         {
             //if (this.WindowState == WindowState.Maximized)
             //{
@@ -30,6 +41,12 @@ namespace EMIAC.View
             //    this.WindowState = WindowState.Maximized;
             //}
         }
+
+        private async void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private Point _mouseDownPosition;
         private bool _isMouseDown;
 
@@ -68,8 +85,15 @@ namespace EMIAC.View
 
         private void VxodDlyaVrach(object sender, RoutedEventArgs e)
         {
-            DoctorWindow authvrach = new DoctorWindow();
+            AdminCRUDAdmin authvrach = new AdminCRUDAdmin();
             authvrach.Show();
+            this.Close();
+        }
+
+        private void AuthClient(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
             this.Close();
         }
     }
