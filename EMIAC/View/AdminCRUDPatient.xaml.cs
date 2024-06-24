@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,7 +11,9 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace EMIAC.View
 {
@@ -19,10 +22,34 @@ namespace EMIAC.View
     /// </summary>
     public partial class AdminCRUDPatient : Window
     {
+        List<string> list = new List<string> { "Пользователь", "Врач", "Администратор" };//это окно должно открываться первым (дефолтное)
         public AdminCRUDPatient()
         {
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
+            ComboPerexodAdmin.ItemsSource = list;
+        }
+
+        private void PerexodAdmina(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboPerexodAdmin.SelectedItem == list[0])
+            {
+                AdminCRUDPatient patientWindow = new AdminCRUDPatient();
+                patientWindow.Show();
+                Close();
+            }
+            if (ComboPerexodAdmin.SelectedItem == list[1])
+            {
+                AdminCRUDVrach doctorWindow = new AdminCRUDVrach();
+                doctorWindow.Show();
+                Close();
+            }
+            if (ComboPerexodAdmin.SelectedItem == list[2])
+            {
+                AdminCRUDAdmin adminWindow = new AdminCRUDAdmin();
+                adminWindow.Show();
+                Close();
+            }
         }
     }
 }

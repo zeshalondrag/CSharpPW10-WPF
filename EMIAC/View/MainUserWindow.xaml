@@ -23,7 +23,6 @@
         </Grid.RowDefinitions>
         <StackPanel Background="#007BFE" >
             <TextBlock Text=" ЕМИАС                                 в.1.0" Foreground="White" FontSize="20" FontWeight="Bold"/>
-            <Image Source="Images/LiniyaBel.png"/>
         </StackPanel>
         <StackPanel Background="#007BFE" Grid.RowSpan="2" Grid.Row="1">
             <TreeView MinWidth="220" Foreground="White" FontSize="14">
@@ -52,11 +51,11 @@
             </TreeView>
         </StackPanel>
         <TextBlock Text="Запись" Grid.Column="1" FontSize="25" Grid.ColumnSpan="2" Margin="10,0,30,0" TextWrapping="Wrap" FontWeight="DemiBold"/>
-        <TextBlock Text="Полис ОМС : //Ник" Grid.Row="2" Foreground="White" FontSize="16" Margin="10,9,0,0"/>
+        <TextBlock Text="Полис ОМС : " Grid.Row="2" Foreground="White" FontSize="16" Margin="10,9,0,0"/>
         <Button Grid.Row="2" Height="40" Foreground="Transparent" BorderBrush="Transparent" Width="40" HorizontalAlignment="Right" VerticalAlignment="Center" Click="SettingsClient" Background="#00000000"/>
         <materialDesign:PackIcon Kind="CogOutline" Grid.Row="2" Foreground="White" Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <materialDesign:PackIcon Kind="ChevronDown" Grid.Row="2" Height="25" Width="26" VerticalAlignment="Center" Margin="172,0,0,0" Foreground="White" RenderTransformOrigin="0.492,-0.204"/>
-        <ComboBox Grid.Row="2" Height="40" Width="40" Margin="150,0,100,0" BorderThickness="0,0,0,0" Foreground="Transparent" Opacity="0.1"/>
-        
+        <ComboBox Grid.Row="2" Height="40" Margin="109,0,115,0" BorderThickness="0,0,0,0" Foreground="Transparent" Opacity="0.1"/>
+
     </Grid>
 </Window>

@@ -89,5 +89,11 @@ namespace EMIAC.View
             }
         }
 
+        private void VxodDlyaVrach(object sender, RoutedEventArgs e)
+        {
+            DoctorWindow authvrach = new DoctorWindow();
+            authvrach.Show();
+            this.Close();
+        }
     }
 }

@@ -19,10 +19,34 @@ namespace EMIAC.View
     /// </summary>
     public partial class AdminCRUDVrach : Window
     {
+        List<string> list = new List<string> { "Пользователь", "Врач", "Администратор" };
         public AdminCRUDVrach()
         {
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
+            ComboPerexodAdmin.ItemsSource = list;
+        }
+
+        private void PerexodAdmina(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboPerexodAdmin.SelectedItem == list[0])
+            {
+                AdminCRUDPatient patientWindow = new AdminCRUDPatient();
+                patientWindow.Show();
+                Close();
+            }
+            if (ComboPerexodAdmin.SelectedItem == list[1])
+            {
+                AdminCRUDVrach doctorWindow = new AdminCRUDVrach();
+                doctorWindow.Show();
+                Close();
+            }
+            if (ComboPerexodAdmin.SelectedItem == list[2])
+            {
+                AdminCRUDAdmin adminWindow = new AdminCRUDAdmin();
+                adminWindow.Show();
+                Close();
+            }
         }
     }
 }

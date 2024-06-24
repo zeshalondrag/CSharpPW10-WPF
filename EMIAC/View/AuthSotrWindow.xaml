@@ -33,7 +33,7 @@
         <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" Width="176" Height="26" Background="#007BFE" Click="Auth_Client"  Margin="42,12,10,12">
             <TextBlock Text="Я пациент" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
         </Button>
-        <Button Grid.Row="4" Grid.ColumnSpan="2" Width="176" Height="26" Background="#007BFE" Margin="10,12,152,12">
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Width="176" Height="26" Background="#007BFE" Margin="10,12,152,12" Click="VxodDlyaVrach">
             <TextBlock Text="Войти" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
         </Button>
         <Button Grid.Column="4" Click="Exit" BorderBrush="Transparent" Opacity="5" Margin="0,-6,0,104" Grid.RowSpan="2" Width="18" Height="18" >
