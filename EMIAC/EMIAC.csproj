@@ -123,8 +123,10 @@
     <Compile Include="ViewModel\AdminViewModel.cs" />
     <Compile Include="ViewModel\AuthViewModel.cs" />
     <Compile Include="ViewModel\DoctorViewModel.cs" />
+    <Compile Include="ViewModel\Helpers\BindableCommand.cs" />
     <Compile Include="ViewModel\Helpers\BindingHelper.cs" />
     <Compile Include="ViewModel\PatientViewModel.cs" />
+    <Compile Include="ViewModel\PatientViewModelSettings.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\AdminCRUDAdmin.xaml.cs">
       <DependentUpon>AdminCRUDAdmin.xaml</DependentUpon>
