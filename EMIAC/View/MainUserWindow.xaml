@@ -110,71 +110,23 @@
             <TextBlock Grid.Row="4" Grid.Column="1" Text="Архивные записи" FontSize="20" VerticalAlignment="Center"/>
             <DatePicker Grid.Row="4" Grid.Column="1" FontSize="12"  Margin="224,15,672,10" materialDesign:HintAssist.Hint="Записи с:" Width="147" BorderBrush="#807F7F" BorderThickness="1"/>
             <DatePicker Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="Записи по:" FontSize="12" Margin="390,15,506,10" Width="147" BorderBrush="#807F7F" BorderThickness="1"/>
-            <ListBox Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="10,10,0,10" Background="#EDEDED">
+            <ListBox x:Name="DobavAktiv" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="10,10,0,10" Background="#EDEDED">
                 <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
-                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
-                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
-                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
-                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
-                </StackPanel>
-                <StackPanel Height="85" Width="280" Margin="0,-5,0,0" Background="White">
-                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
-                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
-                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
-                </StackPanel>
             </ListBox>
-            <ListBox Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="327,10,0,10" Background="#EDEDED">
+            <ListBox x:Name="DobavAktiv1" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="327,10,0,10" Background="#EDEDED">
                 <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
-                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
-                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
-                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
-                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
-                </StackPanel>
             </ListBox>
-            <ListBox Grid.Row="3" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="647,10,0,10" Background="#EDEDED">
+            <ListBox Grid.Row="3" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="647,10,0,10" Background="#EDEDED">
                 <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
                 <TextBlock Height="20" Width="214" FontSize="12" Margin="50,70,0,0" TextWrapping="Wrap" Text="На этот месяц нет архивных записей"  Foreground="#807F7F"/>
             </ListBox>
-            <ListBox Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="10,10,0,10" Background="#EDEDED">
+            <ListBox  ScrollViewer.VerticalScrollBarVisibility="Hidden" x:Name="DobavArxiv" Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="10,10,0,10" Background="#EDEDED">
                 <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
-                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
-                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
-                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
-                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
-                </StackPanel>
-                <StackPanel Height="85" Width="280" Margin="0,-5,0,0" Background="White">
-                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
-                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
-                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
-                </StackPanel>
             </ListBox>
-            <ListBox Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="327,10,0,10" Background="#EDEDED">
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Hidden" x:Name="DobavArxiv1" Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="327,10,0,10" Background="#EDEDED">
                 <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
-                <StackPanel Height="85" Width="280" Margin="0,-10,0,0" Background="White">
-                    <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
-                    <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
-                    <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
-                    <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
-                </StackPanel>
             </ListBox>
-            <ListBox Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="647,10,0,10" Background="#EDEDED">
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Row="5" Grid.Column="1" Height="230" Width="300" HorizontalAlignment="Left" Margin="647,10,0,10" Background="#EDEDED">
                 <TextBlock Height="20" Width="100" Text="&lt;Дата>"/>
                 <TextBlock Height="20" Width="214" FontSize="12" Margin="50,70,0,0" TextWrapping="Wrap" Text="На этот месяц нет архивных записей"  Foreground="#807F7F"/>
             </ListBox>

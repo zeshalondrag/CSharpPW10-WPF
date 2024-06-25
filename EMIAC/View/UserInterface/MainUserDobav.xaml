@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="EMIAC.View.UserInterface.MainUserDobav"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EMIAC.View.UserInterface"
+             mc:Ignorable="d" Width="280" Height="88">
+    <Grid>
+        <StackPanel Width="280" Background="White">
+            <TextBlock HorizontalAlignment="Center" Width="219" Margin="5" Text="Врач общей практики (семейный врач)" FontSize="12"/>
+            <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Имя врача>" FontSize="8" Foreground="#807F7F"/>
+            <TextBlock Width="130" HorizontalAlignment="Left" Text="&lt;Дата записи>" FontSize="8" Foreground="#807F7F"/>
+            <TextBlock HorizontalAlignment="Right" Width="130" FontSize="8" Text="Москва, улица Профсоюзная улица, д. 111А" Foreground="#807F7F" Margin="0,-18,0,0" TextWrapping="Wrap"/>
+            <Button Background="#007BFE" Content="Повторить" Height="23" FontSize="11" Width="120" Margin="-10,5,135,0"/>
+            <Button Background="#FE0000" Content="Удалить" Height="23" FontSize="11" Width="120" Margin="130,-23,-10,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
