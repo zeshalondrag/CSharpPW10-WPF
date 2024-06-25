@@ -262,6 +262,24 @@
   <ItemGroup>
     <Resource Include="View\Images\Pediatr.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\ykol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\ShtykaVrach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Hronik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Konsylt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Molniya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Naprav.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

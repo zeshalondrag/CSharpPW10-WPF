@@ -32,14 +32,8 @@
         </StackPanel>
         <StackPanel Background="#007BFE" Grid.RowSpan="8" Grid.Row="1">
             <TreeView MinWidth="220" Foreground="White" FontSize="14">
-                <TreeViewItem Header="Главная">
-                    <TreeViewItem>
-                        <TreeViewItem.Header>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Записи и направления" />
-                            </StackPanel>
-                        </TreeViewItem.Header>
-                    </TreeViewItem>
+                <TreeViewItem Header="Главная" MouseDoubleClick="GoToMainUserWindow">
+                    <TreeViewItem MouseDoubleClick="GoToZapisiWindow" Header="Записи и направления"/>
                     <TreeViewItem Header="Рецепты"/>
                     <TreeViewItem Header="Диспанцеризация"/>
                 </TreeViewItem>
