@@ -64,44 +64,12 @@
             <ComboBox Grid.Row="8" Height="40" Margin="109,0,115,0" BorderThickness="0,0,0,0" Foreground="Transparent" Opacity="0.1"/>
             <!-- Основная часть окна (без TreeView) -->
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="White">
-                <ListBox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="#EDEDED" Margin="10,0,0,0" >
+                <ListBox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="#EDEDED" Margin="10,0,0,0" Height="110">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" />
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
-                    <StackPanel Background="White" Height="90" Width="160" >
-                        <Image Source="Images/Ychastkovii.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Участковый" HorizontalAlignment="Center" FontSize="20" Height="25" Width="110"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/Zybnoi.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Зубной врач" HorizontalAlignment="Center" FontSize="20" Height="25" Width="120"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/Ychastkovii.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Стоматолог" HorizontalAlignment="Center" FontSize="20" Height="25" Width="108"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/Oftal.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Офтальмолог" HorizontalAlignment="Center" FontSize="20" Height="25" Width="125"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/Otor.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Оториноларинголог" FontSize="16" Height="26" Width="150" Margin="5"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/DetXir.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Детский хирург" HorizontalAlignment="Center" FontSize="16" Height="25" Width="116"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/Spravki.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Направления" HorizontalAlignment="Center" FontSize="20" Height="25" Width="125"/>
-                    </StackPanel>
-                    <StackPanel Background="White" Height="90" Width="160">
-                        <Image Source="Images/Pediatr.png" Width="30" Height="30" Margin="10"/>
-                        <TextBlock Text="Педиатр" HorizontalAlignment="Center" FontSize="20" Height="25" Width="80"/>
-                    </StackPanel>
                 </ListBox>
             </ScrollViewer>
             <TextBlock Grid.Row="2" Grid.Column="1" Text="Действующие записи" FontSize="20" VerticalAlignment="Center"/>

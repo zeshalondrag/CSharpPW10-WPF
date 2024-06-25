@@ -80,7 +80,6 @@ namespace EMIAC.View
             {
                 string header = selectedItem.Header.ToString();
 
-                // Выполните переход на основе выбранного элемента
                 if (header == "Записи и направления")
                 {
                     ZapisiUserWindow zapisiUserWindow = new ZapisiUserWindow();
@@ -89,9 +88,7 @@ namespace EMIAC.View
                 }
                 else if (header == "Файл 2")
                 {
-                    // Перейти на страницу "Файл 2"
                 }
-                // ... и так далее для других элементов TreeView
             }
         }
     }

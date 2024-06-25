@@ -146,6 +146,9 @@
     <Compile Include="View\DoctorWindow.xaml.cs">
       <DependentUpon>DoctorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UserInteface\DoctorsCard.xaml.cs">
+      <DependentUpon>DoctorsCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserInteface\Doctor\AktivnayaZapis.xaml.cs">
       <DependentUpon>AktivnayaZapis.xaml</DependentUpon>
     </Compile>
@@ -220,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DoctorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserInteface\DoctorsCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -316,6 +323,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Images\Naprav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Images\Virus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
