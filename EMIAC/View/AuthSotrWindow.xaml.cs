@@ -26,5 +26,25 @@ namespace EMIAC.View
                 await viewModel.LoginAsync();
             }
         }
+<<<<<<< HEAD
+
+        protected override void OnMouseUp(MouseButtonEventArgs e)
+        {
+            base.OnMouseUp(e);
+
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                _isMouseDown = false;
+            }
+        }
+
+        private void VxodDlyaVrach(object sender, RoutedEventArgs e)
+        {
+            DoctorWindow authvrach = new DoctorWindow();
+            authvrach.Show();
+            this.Close();
+        }
+=======
+>>>>>>> Admin
     }
 }

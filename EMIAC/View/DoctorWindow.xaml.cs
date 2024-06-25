@@ -10,27 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Media.TextFormatting;
 using System.Windows.Shapes;
 
 namespace EMIAC.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainUserWindow.xaml
+    /// Логика взаимодействия для DoctorWindow.xaml
     /// </summary>
-    public partial class MainUserWindow : Window
+    public partial class DoctorWindow : Window
     {
-        public MainUserWindow()
+        public DoctorWindow()
         {
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
-        }
-
-        private void SettingsClient(object sender, RoutedEventArgs e)
-        {
-            SettingsUserWindow settingsWindow = new SettingsUserWindow();
-            settingsWindow.Show();
-            this.Close();
         }
     }
 }
