@@ -108,7 +108,7 @@ namespace EMIAC.ViewModel
 
         private async void InitializePatient()
         {
-            var patient = await _patientService.GetPatientById(_patientId);
+            var patient = await _patientService.GetPatientByIdAsync(_patientId);
 
             PatientName = $" {patient.Name} {patient.Surname} {patient.MiddleName}";
             PatientPolicyNumber = patient.PolicyNumber;
