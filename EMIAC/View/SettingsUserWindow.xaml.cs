@@ -1,10 +1,12 @@
-﻿using System;
+﻿using EMIAC.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using EMIAC.ViewModel;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -22,6 +24,7 @@ namespace EMIAC.View
         public SettingsUserWindow()
         {
             InitializeComponent();
+            DataContext = new PatientViewModelSettings();
             this.WindowState = WindowState.Maximized;
         }
 

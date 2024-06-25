@@ -25,12 +25,18 @@ namespace EMIAC.ViewModel
         private string _patientpolicenumber;
         private DateTime _patientdateofbirth;
 
-        public PatientViewModelSettings(int patientId)
+
+
+        public PatientViewModelSettings()
         {
             _patientService = new PatientService();
-            _patientId = patientId;
             InitializePatient();
+            savechanges = new BindableCommand(_ => SaveChanges());
+            exitfromAccount = new BindableCommand(_ => ExitfromAccount());
         }
+
+        public BindableCommand savechanges { get; set; }
+        public BindableCommand exitfromAccount { get; set; }
 
 
         public string PatientName
@@ -103,7 +109,6 @@ namespace EMIAC.ViewModel
             }
         }
 
-        public BindableCommand AddCommand { get; set; }
 
 
         private async void InitializePatient()
