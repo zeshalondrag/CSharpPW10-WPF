@@ -54,5 +54,12 @@ namespace EMIAC.View
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void ZapisiOpen(object sender, MouseButtonEventArgs e)
+        {
+            ZapisiUserWindow zapisiUserWindow = new ZapisiUserWindow();
+            zapisiUserWindow.Show();
+            this.Close();
+        }
     }
 }

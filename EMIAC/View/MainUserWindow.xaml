@@ -33,7 +33,7 @@
             <StackPanel Background="#007BFE" Grid.RowSpan="8" Grid.Row="1">
                 <TreeView MinWidth="220" Foreground="White" FontSize="14">
                     <TreeViewItem Header="Главная">
-                        <TreeViewItem>
+                        <TreeViewItem MouseDoubleClick="ZapisiOpen">
                             <TreeViewItem.Header>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="Записи и направления" />

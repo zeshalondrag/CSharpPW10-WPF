@@ -150,6 +150,9 @@
     <Compile Include="View\SettingsUserWindow.xaml.cs">
       <DependentUpon>SettingsUserWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ZapisiUserWindow.xaml.cs">
+      <DependentUpon>ZapisiUserWindow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -208,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SettingsUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZapisiUserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
