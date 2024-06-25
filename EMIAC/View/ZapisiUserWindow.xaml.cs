@@ -38,5 +38,20 @@ namespace EMIAC.View
             mainUserWindow.Show();
             this.Close();
         }
+
+        private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if (e.NewValue is TreeViewItem selectedItem)
+            {
+                string header = selectedItem.Header.ToString();
+
+                if (header == "Главная")
+                {
+                    MainUserWindow mainUserWindow = new MainUserWindow();
+                    mainUserWindow.Show();
+                    this.Close();
+                }
+            }
+        }
     }
 }

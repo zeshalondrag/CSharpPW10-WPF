@@ -31,9 +31,9 @@
             <TextBlock Text=" ЕМИАС                                 в.1.0" Foreground="White" FontSize="20" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel Background="#007BFE" Grid.RowSpan="8" Grid.Row="1">
-            <TreeView MinWidth="220" Foreground="White" FontSize="14">
-                <TreeViewItem Header="Главная" MouseDoubleClick="GoToMainUserWindow">
-                    <TreeViewItem MouseDoubleClick="GoToZapisiWindow" Header="Записи и направления"/>
+            <TreeView MinWidth="220" Foreground="White" FontSize="14" SelectedItemChanged="PerexodTreeView">
+                <TreeViewItem Header="Главная" >
+                    <TreeViewItem Header="Записи и направления"/>
                     <TreeViewItem Header="Рецепты"/>
                     <TreeViewItem Header="Диспанцеризация"/>
                 </TreeViewItem>
