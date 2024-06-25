@@ -19,22 +19,21 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="57"/>
-                <RowDefinition Height="43"/>
-                <RowDefinition Height="32"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="116"/>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="315"/>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="315"/>
-                <RowDefinition Height="45"/>
-                <RowDefinition Height="45"/>
-                <RowDefinition Height="28"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
             </Grid.RowDefinitions>
             <ScrollViewer Grid.RowSpan="2" Grid.ColumnSpan="4" Foreground="Black"/>
             <StackPanel Grid.ColumnSpan="5" Background="#007BFE"/>
@@ -47,17 +46,12 @@
             <TextBlock Grid.Column="1" Grid.Row="2" Text="Прием:" FontSize="18" FontWeight="Medium"/>
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="3" materialDesign:HintAssist.HelperText="Жалобы" BorderBrush="#807F7F" BorderThickness="1" Margin="10,5,10,15"/>
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="4" materialDesign:HintAssist.HelperText="Общий осмотр" BorderBrush="#807F7F" BorderThickness="1" Margin="10,5,10,15"/>
-            <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5" materialDesign:HintAssist.Hint="Основной диагноз" BorderBrush="#807F7F" BorderThickness="1" Margin="10,3,10,3"/>
+            <TextBox VerticalAlignment="Center" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="5" materialDesign:HintAssist.Hint="Основной диагноз" BorderBrush="#807F7F" BorderThickness="1" Margin="10,0,10,0"/>
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="6" materialDesign:HintAssist.HelperText="Дополнения к основному диагнозу" BorderBrush="#807F7F" BorderThickness="1" Margin="10,5,10,15"/>
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="7" materialDesign:HintAssist.HelperText="Рекомендации" BorderBrush="#807F7F" BorderThickness="1" Margin="10,5,10,15"/>
             <ComboBox Grid.Column="1" Grid.Row="8" materialDesign:HintAssist.Hint="Специальность врача" BorderBrush="#807F7F" BorderThickness="1" Margin="10,0,172,0" Height="26"/>
             <Button Grid.Column="1" Grid.Row="8" Margin="733,7,20,1" Grid.ColumnSpan="4" Content="Добавить направление" Background="#007BFE"/>
-            <ListBox Grid.Row="9" Grid.Column="1" Background="#EDEDED" Grid.ColumnSpan="4" Margin="10,0,10,0"/>
-            <StackPanel  Grid.Row="9" Grid.Column="1" Background="White" Height="40" VerticalAlignment="Top" Margin="23,10,20,0" Grid.ColumnSpan="4">
-                <TextBlock Text="Направление к специалисту: " Width="225" Height="39" FontSize="16" HorizontalAlignment="Left"/>
-            </StackPanel>
-            <Button Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" Margin="20,15,20,69" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent"/>
-            <materialDesign:PackIcon Foreground="#FE0000" Kind="TrashCanOutline" Width="40" Height="38" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="2" Margin="20,12,0,0"/>
+            <ListBox x:Name="NapravlenieList" Grid.Column="1" Grid.Row="8" Background="#EDEDED" Grid.ColumnSpan="4" Margin="10,75,20,0" Grid.RowSpan="2"/>
             <CheckBox Grid.Row="10" Grid.Column="1" Width="18" HorizontalAlignment="Left" Margin="0,8,0,9"/>
             <TextBlock Grid.Row="10" Grid.Column="1" Text="Анализы:" Margin="23,8,817,9"/>
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="10" materialDesign:HintAssist.Hint="Наименование анализа" BorderBrush="#807F7F" BorderThickness="1" Margin="88,4,10,5"/>
@@ -66,42 +60,12 @@
             <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="12" materialDesign:HintAssist.Hint="Наименование исследования" BorderBrush="#807F7F" BorderThickness="1" Margin="121,4,10,5"/>
             <Button Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="14" Content="Прикрепить дополнительные файлы" Margin="0,6,10,7" Background="#007BFE"/>
             <Button Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="15" Content="Завершить прием"  Margin="0,6,10,7" Background="#007BFE"/>
-            <ListBox Grid.Row="1" Grid.RowSpan="12" Background="#EDEDED"/>
-            <DatePicker Grid.Row="1" materialDesign:HintAssist.Hint="Расписание" Margin="10,0,10,0" BorderBrush="#807F7F" BorderThickness="2" Height="24"/>
-            <StackPanel Background="White" Grid.Row="2" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="2" Margin="0,5,174,5" Text="&lt;Имя пациента>" FontSize="16" Foreground="#807F7F"/>
-            <Button Grid.Row="3" Margin="0,12,0,13" Content="Запись завершена" Background="#EDEDED" Foreground="#807F7F" HorizontalAlignment="Center" Width="490" BorderBrush="#EDEDED"/>
-            <TextBlock Grid.Row="2" Margin="454,0,0,0" Height="24" Text="Время" Foreground="#807F7F"/>
-            <StackPanel Background="White" Grid.Row="4" Grid.RowSpan="3" Margin="0,5,0,35"/>
-            <TextBlock Grid.Row="4" Margin="0,5,174,8" Text="&lt;Имя пациента>" FontSize="16" Foreground="#807F7F"/>
-            <TextBlock Grid.Row="4" Margin="450,10,4,9" Height="24" Text="Время" Foreground="#807F7F"/>
-            <Button Grid.Row="5" Margin="10,7,273,43" Grid.RowSpan="2" Background="#807F7F" Content="Начать приём"/>
-            <Button Grid.Row="5" Margin="273,7,10,43" Grid.RowSpan="2" Background="#807F7F" Content="Отменить запись"/>
-            <StackPanel Background="White" Grid.Row="6" Grid.RowSpan="3" Margin="0,28,0,28"/>
-            <TextBlock Grid.Row="6" Margin="0,28,174,42" Text="&lt;Имя пациента>" FontSize="16" Foreground="#807F7F" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="6" Margin="450,37,4,39" Height="24" Text="Время" Foreground="#807F7F" Grid.RowSpan="2"/>
-            <Button Grid.Row="7" Margin="10,18,273,0" Background="#807F7F" Content="Начать приём"/>
-            <Button Grid.Row="7" Margin="273,18,10,0" Background="#807F7F" Content="Отменить запись"/>
-            <StackPanel Background="White" Grid.Row="8" Grid.RowSpan="2" Margin="-4,23,4,49"/>
-            <TextBlock Grid.Row="8" Margin="0,24,174,102" Text="&lt;Имя пациента>" FontSize="16" Foreground="#807F7F" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="8" Margin="450,27,4,105" Height="24" Text="Время" Foreground="#807F7F" Grid.RowSpan="2"/>
-            <Button Grid.Row="9" Margin="10,18,273,66" Background="#807F7F" Content="Начать приём"/>
-            <Button Grid.Row="9" Margin="273,18,10,66" Background="#807F7F" Content="Отменить запись"/>
-            <StackPanel Background="White" Grid.Row="9" Grid.RowSpan="3" Margin="0,80,0,302"/>
-            <TextBlock Grid.Row="9" Margin="0,86,174,0" Text="&lt;Имя пациента>" FontSize="16" Foreground="Black"/>
-            <TextBlock Grid.Row="9" Margin="450,86,4,6" Height="24" Text="Время" Foreground="#807F7F"/>
-            <Button Grid.Row="10" Margin="10,6,273,312" Background="#007BFE" Content="Начать приём" Grid.RowSpan="2"/>
-            <Button Grid.Row="10" Margin="273,6,10,312" Background="#FE0000" Content="Отменить запись" Grid.RowSpan="2"/>
-            <StackPanel Background="White" Grid.Row="11" Margin="0,27,0,204"/>
-            <TextBlock Grid.Row="11" Margin="0,36,174,249" Text="&lt;Имя пациента>" FontSize="16" Foreground="Black"/>
-            <TextBlock Grid.Row="11" Margin="449,36,5,255" Height="24" Text="Время" Foreground="#807F7F"/>
-            <Button Grid.Row="11" Margin="10,66,273,217" Background="#007BFE" Content="Начать приём"/>
-            <Button Grid.Row="11" Margin="273,66,10,217" Background="#FE0000" Content="Отменить запись"/>
-            <StackPanel Background="White" Grid.Row="11" Margin="0,126,0,105"/>
-            <TextBlock Grid.Row="11" Margin="0,135,174,147" Text="&lt;Имя пациента>" FontSize="16" Foreground="Black"/>
-            <TextBlock Grid.Row="11" Margin="449,135,5,156" Height="24" Text="Время" Foreground="#807F7F"/>
-            <Button Grid.Row="11" Margin="10,167,273,116" Background="#007BFE" Content="Начать приём"/>
-            <Button Grid.Row="11" Margin="273,168,10,115" Background="#FE0000" Content="Отменить запись"/>
+            <ListBox x:Name="Zapisi" Grid.Row="2" Grid.RowSpan="10" Background="#EDEDED" Margin="0,0,0,10"/>
+            <DatePicker Grid.Row="1" materialDesign:HintAssist.Hint="Расписание" Margin="10,8,10,5" BorderBrush="#807F7F" BorderThickness="2"/>
+
+
+
+
             <Button Grid.Row="12" Background="#FE0000" Content="Выйти из аккаунта" Margin="10,2,10,1" Click="GoAuth"/>
             <RichTextBox AcceptsTab="True" Grid.Row="11" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="4" Margin="0,0,10,0" Foreground="#807F7F">
                 <RichTextBox.Resources>

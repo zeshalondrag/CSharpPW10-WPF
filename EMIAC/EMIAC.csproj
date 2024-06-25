@@ -144,6 +144,18 @@
     <Compile Include="View\DoctorWindow.xaml.cs">
       <DependentUpon>DoctorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UserInteface\Doctor\AktivnayaZapis.xaml.cs">
+      <DependentUpon>AktivnayaZapis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserInteface\Doctor\Napravlenie.xaml.cs">
+      <DependentUpon>Napravlenie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserInteface\Doctor\VrenyaZapisiProshlo.xaml.cs">
+      <DependentUpon>VrenyaZapisiProshlo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserInteface\Doctor\ZavershenieZapisi.xaml.cs">
+      <DependentUpon>ZavershenieZapisi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserInteface\MainDobavCard.xaml.cs">
       <DependentUpon>MainDobavCard.xaml</DependentUpon>
     </Compile>
@@ -206,6 +218,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DoctorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserInteface\Doctor\AktivnayaZapis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserInteface\Doctor\Napravlenie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserInteface\Doctor\VrenyaZapisiProshlo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserInteface\Doctor\ZavershenieZapisi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
