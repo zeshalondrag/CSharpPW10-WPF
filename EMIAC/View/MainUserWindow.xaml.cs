@@ -91,5 +91,12 @@ namespace EMIAC.View
                 }
             }
         }
+
+        private void Zapisi(object sender, RoutedEventArgs e)
+        {
+            ZapisiUserWindow zapisiUserWindow = new ZapisiUserWindow();
+            zapisiUserWindow.Show();
+            this.Close();
+        }
     }
 }
