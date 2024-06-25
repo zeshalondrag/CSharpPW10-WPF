@@ -73,5 +73,26 @@ namespace EMIAC.View
             zapisiUserWindow.Show();
             this.Close();
         }
+
+        private void TreeViewPerexod(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if (e.NewValue is TreeViewItem selectedItem)
+            {
+                string header = selectedItem.Header.ToString();
+
+                // Выполните переход на основе выбранного элемента
+                if (header == "Записи и направления")
+                {
+                    ZapisiUserWindow zapisiUserWindow = new ZapisiUserWindow();
+                    zapisiUserWindow.Show();
+                    this.Close();
+                }
+                else if (header == "Файл 2")
+                {
+                    // Перейти на страницу "Файл 2"
+                }
+                // ... и так далее для других элементов TreeView
+            }
+        }
     }
 }

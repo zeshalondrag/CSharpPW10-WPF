@@ -25,18 +25,28 @@ namespace EMIAC.View
             this.WindowState = WindowState.Maximized;
         }
 
-        private void GoToMainUserWindow(object sender, MouseButtonEventArgs e)
-        {
-            MainUserWindow mainUserWindow = new MainUserWindow();
-            mainUserWindow.Show();
-            this.Close();
-        }
+        
 
-        private void GoToZapisiWindow(object sender, MouseButtonEventArgs e)
+        private void PerexodTreeView(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            ZapisiUserWindow zapisiUserWindow = new ZapisiUserWindow();
-            zapisiUserWindow.Show();
-            this.Close();
+            if (e.NewValue is TreeViewItem selectedItem)
+            {
+                string header = selectedItem.Header.ToString();
+
+                if (header == "Главная")
+                {
+                    MainUserWindow mainUserWindow = new MainUserWindow();
+                    mainUserWindow.Show();
+                    this.Close();
+                }
+                else if (header == "Записи и направления")
+                {
+                    ZapisiUserWindow userWindow = new ZapisiUserWindow();
+                    userWindow.Show();
+                    this.Close();
+                }
+                // ... и так далее для других элементов TreeView
+            }
         }
     }
 }
