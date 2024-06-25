@@ -13,19 +13,22 @@ public class PatientService
         _httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:7226/") };
     }
 
-    public async Task<List<Patient>> GetPatientsAsync()
+    public async Task<Patient> GetPatientById(int patientId)
     {
-        return await _httpClient.GetFromJsonAsync<List<Patient>>("api/Patients");
+        var response = await _httpClient.GetAsync($"Patients/{patientId}");
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadAsAsync<Patient>();
+    }
+
+    public async Task UpdatePatient(int patientId, string patientPhoneNumber, string patientEmail, string patientAdress, string patientLivingAddress)
+    {
+        var response = await _httpClient.PutAsJsonAsync($"Patients/{patientId}", new { PatientPhoneNumber = patientPhoneNumber, PatientEmail = patientEmail, PatientAddress = patientAdress, PatientLivingAddress = patientLivingAddress });
+        response.EnsureSuccessStatusCode();
     }
 
     public async Task<Patient> GetPatientByIdAsync(int id)
     {
         return await _httpClient.GetFromJsonAsync<Patient>($"api/Patients/{id}");
-    }
-
-    public async Task CreatePatientAsync(Patient patient)
-    {
-        await _httpClient.PostAsJsonAsync("api/Patients", patient);
     }
 
     public async Task UpdatePatientAsync(Patient patient)
