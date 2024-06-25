@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EMIAC.View.UserInteface.Doctor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,27 @@ namespace EMIAC.View
         public DoctorWindow()
         {
             InitializeComponent();
+            ZavershenieZapisi zavershenieZapisi = new ZavershenieZapisi();
+            VrenyaZapisiProshlo vrenyaZapisiProshlo = new VrenyaZapisiProshlo();
+            VrenyaZapisiProshlo vrenyaZapisiProshlo1 = new VrenyaZapisiProshlo();
+            VrenyaZapisiProshlo vrenyaZapisiProshlo2 = new VrenyaZapisiProshlo();
+            VrenyaZapisiProshlo vrenyaZapisiProshlo3 = new VrenyaZapisiProshlo();
+            AktivnayaZapis aktivnayaZapis = new AktivnayaZapis();
+            AktivnayaZapis aktivnayaZapis1 = new AktivnayaZapis();
+            AktivnayaZapis aktivnayaZapis2 = new AktivnayaZapis();
+            AktivnayaZapis aktivnayaZapis3 = new AktivnayaZapis();
+            Zapisi.Items.Add(zavershenieZapisi);
+            Zapisi.Items.Add(vrenyaZapisiProshlo);
+            Zapisi.Items.Add(vrenyaZapisiProshlo1);
+            Zapisi.Items.Add(vrenyaZapisiProshlo2);
+            Zapisi.Items.Add(vrenyaZapisiProshlo3);
+            Zapisi.Items.Add(aktivnayaZapis);
+            Zapisi.Items.Add(aktivnayaZapis1);
+            Zapisi.Items.Add(aktivnayaZapis2);
+            Zapisi.Items.Add(aktivnayaZapis3);
             this.WindowState = WindowState.Maximized;
+            Napravlenie napravlenie = new Napravlenie();
+            NapravlenieList.Items.Add(napravlenie);
         }
 
         private void Exit(object sender, RoutedEventArgs e)

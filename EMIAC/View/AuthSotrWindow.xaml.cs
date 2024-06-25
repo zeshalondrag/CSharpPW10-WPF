@@ -44,7 +44,9 @@ namespace EMIAC.View
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            DoctorWindow doctorWindow = new DoctorWindow();
+            doctorWindow.Show();
+            this.Close();
         }
 
         private Point _mouseDownPosition;

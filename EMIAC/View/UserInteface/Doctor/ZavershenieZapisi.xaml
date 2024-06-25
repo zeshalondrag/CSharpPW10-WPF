@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="EMIAC.View.UserInteface.Doctor.ZavershenieZapisi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EMIAC.View.UserInteface.Doctor"
+             mc:Ignorable="d" 
+                      d:DesignHeight="50" d:DesignWidth="500">
+    <Grid>
+        <StackPanel Background="White">
+            <TextBlock Text="&lt;Имя пациента&gt;" FontSize="16" Foreground="#807F7F" HorizontalAlignment="Left" Width="248" Margin="15,0,150,0" Height="22"/>
+            <TextBlock Height="24" Text="Время" Foreground="#807F7F" Width="96" Margin="0,-21,15,0" TextAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Background="#EDEDED" Foreground="#807F7F" Content="Запись завершена" FontSize="10" Height="22" Width="480" Margin="0,0,0,0" BorderBrush="Transparent"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
