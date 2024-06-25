@@ -15,19 +15,19 @@ namespace EMIAC.ViewModel
 {
     internal class PatientViewModelSettings : BindingHelper
     {
-        private readonly ApiService _apiService;
+        private readonly PatientService _patientService;
         private string _patientName;
         private string _patientEmail;
         private string _patientphonenumber;
         private int _patientId;
         private string _patientadress;
         private string _patientlivingadress;
-        private long _patientoms;
+        private string _patientpolicenumber;
         private DateTime _patientdateofbirth;
 
         public PatientViewModelSettings(int patientId)
         {
-            _apiService = new ApiService();
+            _patientService = new PatientService();
             _patientId = patientId;
             InitializePatient();
         }
@@ -83,12 +83,12 @@ namespace EMIAC.ViewModel
             }
         }
 
-        public long PatientOms
+        public string PatientPolicyNumber
         {
-            get => _patientoms;
+            get => _patientpolicenumber;
             set
             {
-                _patientoms = value;
+                _patientpolicenumber = value;
                 OnPropertyChanged();
             }
         }
@@ -108,16 +108,16 @@ namespace EMIAC.ViewModel
 
         private async void InitializePatient()
         {
-            var patient = await _apiService.GetPatientById(_patientId);
+            var patient = await _patientService.GetPatientById(_patientId);
 
-            PatientName = $" {patient.PatientName} {patient.PatientSurname} {patient.PatientNickName}";
-            PatientOms = patient.OMS;
-            PatientDateOfBirth = patient.PatientBirthDate;
+            PatientName = $" {patient.Name} {patient.Surname} {patient.MiddleName}";
+            PatientPolicyNumber = patient.PolicyNumber;
+            PatientDateOfBirth = patient.BirthDate;
         }
 
         private async Task SaveChanges()
         {
-            await _apiService.UpdatePatient(_patientId, PatientPhoneNumber, PatientEmail, PatientAdress, PatientLivingAdress);
+            await _patientService.UpdatePatient(_patientId, PatientPhoneNumber, PatientEmail, PatientAdress, PatientLivingAdress);
 
         }
 
