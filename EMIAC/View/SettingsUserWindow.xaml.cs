@@ -24,5 +24,19 @@ namespace EMIAC.View
             InitializeComponent();
             this.WindowState = WindowState.Maximized;
         }
+
+        private void GoToMainUserWindow(object sender, MouseButtonEventArgs e)
+        {
+            MainUserWindow mainUserWindow = new MainUserWindow();
+            mainUserWindow.Show();
+            this.Close();
+        }
+
+        private void GoToZapisiWindow(object sender, MouseButtonEventArgs e)
+        {
+            ZapisiUserWindow zapisiUserWindow = new ZapisiUserWindow();
+            zapisiUserWindow.Show();
+            this.Close();
+        }
     }
 }

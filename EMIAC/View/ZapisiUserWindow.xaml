@@ -138,6 +138,57 @@
                 </ListBox>
             </ScrollViewer>
             <TextBlock Text="Цель обращения" Grid.Row="8" Grid.Column="1" FontSize="25" Grid.ColumnSpan="2" Margin="10,0,30,0" TextWrapping="Wrap" FontWeight="Light"/>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="4" Background="White" Margin="0,16,0,0">
+                <ListBox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="#EDEDED" Margin="10,0,0,0" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Ykol.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Вакцинация от гриппа" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Molniya.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Острое заболевание" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Ychastkovii.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Дежурный врач ОРВИ" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Hronik.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Осмотр по хронике" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Naprav.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Оформить документы" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Konsylt.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Женская консультация" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/Zybnoi.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Запись к стоматологу" FontSize="14" TextWrapping="Wrap" Height="39" Width="88" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Background="White" Height="90" Width="160" >
+                        <Image Source="Images/ShtykaVrach.png" Width="29" Height="28" Margin="10"/>
+                        <TextBlock Text="Профилактика" FontSize="14" TextWrapping="Wrap" Height="39" Width="95" TextAlignment="Center"/>
+                    </StackPanel>
+                </ListBox>
+            </ScrollViewer>
+            <TextBlock Text="Направления" Grid.Row="6" Grid.Column="1" FontSize="25" Grid.ColumnSpan="2" Margin="10,0,30,0" TextWrapping="Wrap" FontWeight="Light"/>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" Background="White" Margin="0,16,0,0">
+                <ListBox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Background="#EDEDED" Margin="10,0,0,0" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </ScrollViewer>
         </Grid>
     </ScrollViewer>
 </Window>
