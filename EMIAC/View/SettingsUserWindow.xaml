@@ -75,7 +75,7 @@
         <TextBlock  FontSize="20" Foreground="#007BFE" Text="+7 495 051" Grid.Column="1" Grid.Row="6" Margin="10,23,389,98"/>
         <TextBlock TextAlignment="Right" FontSize="14" TextWrapping="Wrap" Foreground="Black" Text="Единая служба психологической помощи, круглосуточно. Или позвоните по городскому на номер 051" Grid.Column="2" Grid.Row="6" Margin="146,17,10,92" Grid.ColumnSpan="3"/>
         <Button Grid.Column="1" Grid.Row="8" Height="28" Width="362" Grid.ColumnSpan="2" Margin="404,5,280,7" Background="#007BFE" Content="Добавить новый аккаунт"/>
-        <Button Grid.Column="2" Grid.Row="8" Height="28" Width="362" Grid.ColumnSpan="4" Margin="220,5,20,7" Background="#FE0000" Content="Выйти из аккаунта" Command="{Binding }"/>
+        <Button Grid.Column="2" Grid.Row="8" Height="28" Width="362" Grid.ColumnSpan="4" Margin="220,5,20,7" Background="#FE0000" Content="Выйти из аккаунта" Command="{Binding exitfromAccount}"/>
         <Button Grid.Column="1" Grid.Row="8" Height="28" Width="362" Margin="24,5,192,7" Background="#007BFE" Content="Сохранить изменения" Command="{Binding savechanges}" />
     </Grid>
 </Window>
