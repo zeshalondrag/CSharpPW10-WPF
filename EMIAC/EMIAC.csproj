@@ -105,7 +105,7 @@
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="ViewModel\AppointmentViewModel.cs" />
     <Compile Include="ViewModel\AuthViewModel.cs" />
-    <Compile Include="ViewModel\DoctorViewModel.cs" />
+    <Compile Include="ViewModel\DoctorsViewModel.cs" />
     <Compile Include="ViewModel\Helpers\BindingHelper.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\RelayCommandParam.cs" />
